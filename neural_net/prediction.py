@@ -1,7 +1,7 @@
 from PIL import Image
 import torch
 from torchvision import transforms
-from model_setup import model
+from neural_net.model_setup import model
 
 
 # prediction function

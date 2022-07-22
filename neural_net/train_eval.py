@@ -2,8 +2,8 @@ import matplotlib.pyplot as plt
 import torch
 import torch.optim as optim
 import torch.nn as nn
-from model_setup import model
-from data_handler import trainloader, testloader
+from neural_net.model_setup import model
+from neural_net.data_handler import trainloader, testloader
 torch.manual_seed(0)
 
 

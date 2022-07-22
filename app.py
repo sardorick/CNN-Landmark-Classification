@@ -1,9 +1,9 @@
 from flask import Flask, render_template, request
 from flask_restful import Api, Resource
 import os
-from prediction import make_prediction
+from neural_net.prediction import make_prediction
 import torch
-from model_setup import model
+from neural_net.model_setup import model
 from PIL import Image
 import torch
 import pandas as pd
@@ -29,7 +29,7 @@ def index():
         upload_file.save(path_save)
         prediction = make_prediction(model, upload_file, classes)
         save_results(prediction)
-        
+
         return render_template('index.html', upload=True, upload_image=filename, text=prediction)
 
     return render_template('index.html', upload=False)
