@@ -6,8 +6,8 @@ import torch
 from model_setup import model
 from PIL import Image
 import torch
-from torchvision import transforms
-
+import pandas as pd
+from save_results import save_results
 
 
 app = Flask(__name__)
@@ -28,6 +28,8 @@ def index():
         path_save = os.path.join(UPLOAD_PATH, filename)
         upload_file.save(path_save)
         prediction = make_prediction(model, upload_file, classes)
+        save_results(prediction)
+        
         return render_template('index.html', upload=True, upload_image=filename, text=prediction)
 
     return render_template('index.html', upload=False)
