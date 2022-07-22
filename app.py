@@ -6,7 +6,6 @@ import torch
 from neural_net.model_setup import model
 from PIL import Image
 import torch
-import pandas as pd
 from save_results import save_results
 
 
