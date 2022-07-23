@@ -28,15 +28,19 @@
 
     </div>
     {% if upload %}
-        <div style="display: flex; align-items: center; justify-content: center; margin-bottom: 100px; height: 100%; width: 100%; padding: 150px;">
+        <div>
             <br><br>
+            
+                    <tr>
+                        <td>
+                            <img class="rounded float-left img-fluid" src="./static/upload/{{ upload_image }}" style="margin-bottom: 100px; height: 900px; width: 2000px; padding: 350px;">
+                        </td>
+                    </tr>
+            
+        </div> 
+        <div >       
             <table>
-                <tr>
-                    <td>
-                        <img class="rounded float-left img-fluid" src="./static/upload/{{ upload_image }}" alt="">
-                    </td>
-                </tr>
-                <tr style="border: solid black; margin-top: 100px">
+                <tr style="border: solid black;">
                     <br>
                     <td style="background-color: greenyellow;">
                         <h1 class="display-8" style="display: flex; justify-content: center;"> {{ text }}</h1>
@@ -45,6 +49,9 @@
                 </tr>
             </table>
         </div> 
+                
+            
+        
     {% endif %}
 </body>
 </html>
