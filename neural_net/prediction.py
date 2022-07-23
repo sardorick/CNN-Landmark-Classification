@@ -34,7 +34,7 @@ model.load_state_dict(torch.load('model.pth'))
 classes = torch.load('classes.pth')
 
 # # Load image
-img = Image.open('/Users/szokirov/Documents/Datasets/Intel/seg_test/sea/20099.jpg')
+#img = Image.open('/Users/szokirov/Documents/Datasets/Intel/seg_test/sea/20099.jpg')
 
 
-print(make_prediction(model, img, classes))
+#print(make_prediction(model, img, classes))
