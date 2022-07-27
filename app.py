@@ -6,7 +6,7 @@ import torch
 from neural_net.model_setup import model
 from PIL import Image
 import torch
-from save_results import save_results
+from neural_net.save_results import save_results
 
 
 app = Flask(__name__)
